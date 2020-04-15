@@ -1,0 +1,524 @@
+{
+    "pageinfo": {
+        "versionnum": "2.0",
+        "code": "1036427993012113499",
+        "title": "Panel",
+        "pagedescr": "陈列费用-免费订单",
+        "ref": "",
+        "type": "200",
+        "pagetemplatecode": "4",
+        "clientcategorycode": "2",
+        "directorytypecode": "1036427993012113506",
+        "marktype": "3",
+        "status": "1",
+        "eventlist": [
+            {
+                "trigger": "onload",
+                "handler": "handler_loaddetail"
+            }
+        ]
+    },
+    "view": {
+        "body": {
+            "type": "layout",
+            "code": "layout-4867042710777613",
+            "eventlist": [],
+            "overflow":"0",
+            "flex": "1",
+            "content": [
+                {
+                    "type": "panel",
+                    "flex": "1",
+                    "flexdirection": "vertical",
+                    "content": [
+                        {
+                            "type": "button",
+                            "code": "text-8126344392965967",
+                            "eventlist": [],
+                            "linenumber": "",
+                            "name": "cash_max_count",
+                            "value": "",
+                            "hidden": "",
+                            "title": "按钮",
+                            "marginhorizontal": "10",
+                            "marginvertical": "10",
+                            "height": "40",
+                            "backgroundcolor": "#F3B007",
+                            "color": "#ffffff"
+                        },
+                        {
+                            "type": "text",
+                            "code": "text-8126344392965967",
+                            "eventlist": [],
+                            "name": "cash_max_count",
+                            "value": "cash_max_countcash_max_countcash_max_countcash_max_countcash_max_countcash_max_countcash_max_countcash_max_countcash_max_countcash_max_countcash_max_countcash_max_count@@###",
+                            "hidden": "",
+                            "textcolor": "#9A9A1A",
+                            "fontsize": "16"
+                        },
+                        {
+                            "type": "textinput",
+                            "code": "textinput-1036427993012113505",
+                            "name": "cash_product",
+                            "placeholder": "请输入",
+                            "title": "兑付产品1",
+                            "required": "",
+                            "readonly": "1",
+                            "hidden": "",
+                            "titleflex": "",
+                            "maxlength": "5",
+                            "value": ""
+                        },
+                        {
+                            "type": "textinputarea",
+                            "code": "textinputarea-957128985207246924",
+                            "eventlist": [],
+                            "name": "备注",
+                            "historyenable": "0",
+                            "hidden": "",
+                            "maxlength": "100",
+                            "_ide_name": "remark",
+                            "titleflex": "",
+                            "title": "备注",
+                            "required": "",
+                            "readonly": "",
+                            "flex": "",
+                            "titlewidth": "",
+                            "marktype": "1",
+                            "width": "",
+                            "placeholder": "请输入",
+                            "status": "1"
+                        },
+                        {
+                            "type": "dropdownbox",
+                            "code": "dropdownbox-957128985207246901",
+                            "eventlist": [
+                                {
+                                    "trigger": "onvaluechange",
+                                    "handler": ""
+                                },
+                                {
+                                    "trigger": "onload",
+                                    "handler": ""
+                                }
+                            ],
+                            "name": "createop",
+                            "title": "创建人",
+                            "text": "创建人",
+                            "required": "",
+                            "readonly": "",
+                            "hidden": "1",
+                            "titlewidth": "",
+                            "width": "",
+                            "flex": "",
+                            "titleflex": "",
+                            "placeholder": "选择一下",
+                            "value": "",
+                            "height": "",
+                            "color": "",
+                            "textalign": "",
+                            "fontsize": "",
+                            "fontweight": "",
+                            "options": [
+                                {
+                                    "text": "是",
+                                    "key": "1"
+                                },
+                                {
+                                    "text": "否",
+                                    "key": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "textinput",
+                            "code": "textinput-1036427993012113505",
+                            "name": "cash_product",
+                            "placeholder": "",
+                            "title": "兑付产品2",
+                            "required": "1",
+                            "readonly": "",
+                            "hidden": "",
+                            "titleflex": "",
+                            "maxlength": "",
+                            "value": "兑付产品2"
+                        },
+                        {
+                            "type": "textinput",
+                            "code": "textinput-1036427993012113505",
+                            "name": "cash_product",
+                            "placeholder": "",
+                            "title": "兑付产品2",
+                            "required": "1",
+                            "readonly": "",
+                            "hidden": "",
+                            "titleflex": "",
+                            "maxlength": "",
+                            "value": "兑付产品2"
+                        },
+                        {
+                            "type": "textinput",
+                            "code": "textinput-1036427993012113505",
+                            "name": "cash_product",
+                            "placeholder": "",
+                            "title": "兑付产品2",
+                            "required": "1",
+                            "readonly": "",
+                            "hidden": "",
+                            "titleflex": "",
+                            "maxlength": "",
+                            "value": "兑付产品2"
+                        },
+                        {
+                            "type": "textinput",
+                            "code": "textinput-1036427993012113505",
+                            "name": "cash_product",
+                            "placeholder": "",
+                            "title": "兑付产品2",
+                            "required": "1",
+                            "readonly": "",
+                            "hidden": "",
+                            "titleflex": "",
+                            "maxlength": "",
+                            "value": "兑付产品2"
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "name": "op_panel",
+                    "flex": "0",
+                    "flexdirection": "horizontal",
+                    "hidden": "",
+                    "title": "",
+                    "shadow": "1",
+                    "content": [
+                        {
+                            "type": "button",
+                            "code": "button-957160605897330787",
+                            "eventlist": [
+                                {
+                                    "trigger": "onclicked",
+                                    "handler": "1036427993012113499"
+                                }
+                            ],
+                            "name": "提交",
+                            "marginhorizontal": "10",
+                            "bgstyle": "round",
+                            "icon": "",
+                            "bordervisible": "1",
+                            "titleflex": "",
+                            "title": "提交",
+                            "required": "",
+                            "marginvertical": "10",
+                            "readonly": "",
+                            "flex": "1",
+                            "width": "0",
+                            "marktype": "1",
+                            "text": "提交",
+                            "backgroundcolor": "#F3B007",
+                            "color": "#ffffff",
+                            "height": "40"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "presenter": {
+        "initial": [
+            {
+                "code": "initial_receivelink_event",
+                "desc": "页面初始-参数接收",
+                "actions": [
+                    {
+                        "code": "initial_recivelink_action",
+                        "desc": "参数接收",
+                        "type": "receivelink",
+                        "param": {
+                            "name": "__linkparam",
+                            "datatype": "0",
+                            "ctrlcode": "",
+                            "properties": [
+                                {
+                                    "name": "__pagestatus",
+                                    "paramtype": "1",
+                                    "ctrl": {
+                                        "code": "",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "",
+                                    "label": "",
+                                    "paramtype": "2",
+                                    "ctrl": {
+                                        "code": "",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "costid",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-4752910281159796",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "customerid",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-2934038817781189",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "id",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-9688507072994271",
+                                        "component": ""
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "successhint": "",
+                "condition": "",
+                "key": "",
+                "name": ""
+            }
+        ],
+        "interface": [],
+        "handlers": [
+            {
+                "code": "handler_loaddetail",
+                "desc": "加载数据",
+                "notice": "",
+                "condition": "",
+                "actions": [
+                    {
+                        "code": "hadler_loaddetail_action",
+                        "desc": "获取数据",
+                        "type": "datarequest",
+                        "logiccode": "1034708380968685667",
+                        "queue": "0",
+                        "mode": "1",
+                        "getter": [
+                            {
+                                "name": "kx_cost_display_exec",
+                                "datatype": "0",
+                                "ctrl": {
+                                    "code": "",
+                                    "scope": ""
+                                },
+                                "properties": [
+                                    {
+                                        "name": "costid",
+                                        "value": "",
+                                        "ctrl": {
+                                            "code": "text-4752910281159796",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "customerid",
+                                        "value": "",
+                                        "ctrl": {
+                                            "code": "text-2934038817781189",
+                                            "component": ""
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "setter": [
+                            {
+                                "name": "kx_cost_customer",
+                                "datatype": "0",
+                                "ctrlcode": "",
+                                "properties": [
+                                    {
+                                        "name": "costid",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "customerid",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "compensateproductid",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "compensatecount",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "text-max-count",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "tn_singleamount",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "text-8126344392965967",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "productname",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "textinput-1036427993012113505",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "unitname",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "textinput-4910641684248951",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "costname",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "textinput-2302167998518594",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "cashtype",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "textinput-4175262474783771",
+                                            "component": ""
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "pagesize": "",
+                        "lazyload": "",
+                        "condition": ""
+                    },
+                    {
+                        "condition": "",
+                        "code": "1065420192160550917",
+                        "desc": "flycode",
+                        "type": "flycode",
+                        "script": "var cashType = Page.getCtrl('cash_type').value;\nvar isCash = cashType == '现金';\nPage.getCtrl('兑付金额').hidden = !isCash;\nPage.getCtrl('cash_count').hidden = isCash;\nPage.getCtrl('cash_product').hidden = isCash;\nPage.getCtrl('cash_company').hidden = isCash;\nif(isCash){\n  var maxCount = Page.getCtrl('cash_max_count').value;\n  Page.getCtrl('兑付金额').setProperty('upperlimit', maxCount);\n  \n}else{\n  var maxCount = Page.getCtrl('max-count').value;\n  Page.getCtrl('cash_count').setProperty('upperlimit', maxCount);\n}\n"
+                    }
+                ],
+                "successhint": "",
+                "key": "",
+                "name": ""
+            },
+            {
+                "code": "1036427993012113486",
+                "desc": "跳转页面",
+                "successhint": "",
+                "condition": "fly:return Page.constraintCheck();",
+                "key": "",
+                "name": "",
+                "actions": [
+                    {
+                        "type": "link",
+                        "code": "1036427993012113483",
+                        "desc": "链接",
+                        "pagecode": "1036427993012113492",
+                        "mode": "push",
+                        "title": "",
+                        "pagesize": {
+                            "width": "",
+                            "height": ""
+                        },
+                        "param": {
+                            "name": "__linkparam",
+                            "datatype": "0",
+                            "ctrl": {
+                                "code": "",
+                                "scope": ""
+                            },
+                            "properties": [
+                                {
+                                    "name": "__pagestatus",
+                                    "value": "",
+                                    "paramtype": "1",
+                                    "ctrl": {
+                                        "code": "",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "costid",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-4752910281159796",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "customerid",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-2934038817781189",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "Amountcount",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "number-3481103678823569",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "id",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-9688507072994271",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "singleamount",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "currency-9354728357859464",
+                                        "component": ""
+                                    }
+                                }
+                            ]
+                        },
+                        "condition": ""
+                    }
+                ]
+            }
+        ],
+        "preprocessor": []
+    }
+}

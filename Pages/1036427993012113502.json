@@ -1,0 +1,432 @@
+{
+    "pageinfo": {
+        "versionnum": "2.0",
+        "code": "1036427993012113502",
+        "title": "Panel",
+        "ref": "",
+        "type": "200",
+        "pagetemplatecode": "4",
+        "clientcategorycode": "2",
+        "directorytypecode": "1036427993012113506",
+        "marktype": "3",
+        "status": "1",
+        "eventlist": [
+            {
+                "trigger": "onload",
+                "handler": "handler_loaddetail"
+            }
+        ]
+    },
+    "view": {
+        "body": {
+            "type": "layout",
+            "code": "layout-4867042710777613",
+            "eventlist": [],
+            "overflow":"0",
+            "flex": "1",
+            "content": [
+                {
+                    "code": "956356514359152730",
+                    "type": "calendar",
+                    "name": "日期选择",
+                    "value": "day(0)",
+                    "range": "month(-12,12)",
+                    "clickrange": "day(-10,10)",
+                    "displaymode": "week|month",
+                    "celldisplaymode": "follow",
+                    "hinttype": "dot",
+                    "flex": "0",
+                    "cells": [
+                        {
+                            "type": "layout",
+                            "name": "calendarlayout",
+                            "bgcolor": "",
+                            "flexdirection": "",
+                            "content": []
+                        }
+                    ],
+                    "eventlist": [
+                        {
+                            "trigger": "onload",
+                            "handler": "1030268465715482647"
+                        },
+                        {
+                            "trigger": "onclicked",
+                            "handler": "handler_datechange"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "code": "text-8126344392965967",
+                    "eventlist": [],
+                    "name": "cash_max_count",
+                    "value": "",
+                    "hidden": "",
+                    "rows": {
+                        "content": [
+                            {
+                                "type": "layout",
+                                "flexdirection": "horizontal",
+                                "overflow": "0",
+                                "content": [
+                                    {
+                                        "type": "text",
+                                        "code": "a",
+                                        "eventlist": [],
+                                        "linenumber": "",
+                                        "textcolor": "#4A4A4A",
+                                        "fontsize": "16",
+                                        "marginright": "5",
+                                        "name": "cash_max_count",
+                                        "value": "&&&&&&"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "code": "b",
+                                        "eventlist": [],
+                                        "color": "#198BFF",
+                                        "linenumber": "1",
+                                        "maxlength": "10",
+                                        "marginright": "5",
+                                        "bordervisible": "1",
+                                        "fontsize": "10",
+                                        "textalign": "center",
+                                        "maxwidth": "120",
+                                        "name": "cash_max_count",
+                                        "value": "!!!"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "code": "c",
+                                        "eventlist": [],
+                                        "color": "#FF5101",
+                                        "bordervisible": "1",
+                                        "fontsize": "10",
+                                        "maxlength": "5",
+                                        "linenumber": "1",
+                                        "maxwidth": "62",
+                                        "textalign": "center",
+                                        "name": "cash_max_count",
+                                        "value": "@@@@@"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "code": "d",
+                                        "eventlist": [],
+                                        "color": "#8B8B8B",
+                                        "bordervisible": "0",
+                                        "fontsize": "14",
+                                        "textalign": "right",
+                                        "linenumber": "",
+                                        "name": "cash_max_count",
+                                        "value": "%%%%",
+                                        "flexgrow": "1",
+                                        "paddinghorizontal": "3",
+                                        "paddingvertical": "4"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "presenter": {
+        "initial": [
+            {
+                "code": "initial_receivelink_event",
+                "desc": "页面初始-参数接收",
+                "actions": [
+                    {
+                        "code": "initial_recivelink_action",
+                        "desc": "参数接收",
+                        "type": "receivelink",
+                        "param": {
+                            "name": "__linkparam",
+                            "datatype": "0",
+                            "ctrlcode": "",
+                            "properties": [
+                                {
+                                    "name": "__pagestatus",
+                                    "paramtype": "1",
+                                    "ctrl": {
+                                        "code": "",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "",
+                                    "label": "",
+                                    "paramtype": "2",
+                                    "ctrl": {
+                                        "code": "",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "costid",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-4752910281159796",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "customerid",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-2934038817781189",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "id",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-9688507072994271",
+                                        "component": ""
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "successhint": "",
+                "condition": "",
+                "key": "",
+                "name": ""
+            }
+        ],
+        "interface": [],
+        "handlers": [
+            {
+                "code": "handler_loaddetail",
+                "desc": "加载数据",
+                "notice": "",
+                "condition": "",
+                "actions": [
+                    {
+                        "code": "hadler_loaddetail_action",
+                        "desc": "获取数据",
+                        "type": "datarequest",
+                        "logiccode": "1034708380968685667",
+                        "queue": "0",
+                        "mode": "1",
+                        "getter": [
+                            {
+                                "name": "kx_cost_display_exec",
+                                "datatype": "0",
+                                "ctrl": {
+                                    "code": "",
+                                    "scope": ""
+                                },
+                                "properties": [
+                                    {
+                                        "name": "costid",
+                                        "value": "",
+                                        "ctrl": {
+                                            "code": "text-4752910281159796",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "customerid",
+                                        "value": "",
+                                        "ctrl": {
+                                            "code": "text-2934038817781189",
+                                            "component": ""
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "setter": [
+                            {
+                                "name": "kx_cost_customer",
+                                "datatype": "0",
+                                "ctrlcode": "",
+                                "properties": [
+                                    {
+                                        "name": "costid",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "customerid",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "compensateproductid",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "compensatecount",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "text-max-count",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "tn_singleamount",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "text-8126344392965967",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "productname",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "textinput-1036427993012113505",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "unitname",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "textinput-4910641684248951",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "costname",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "textinput-2302167998518594",
+                                            "component": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "cashtype",
+                                        "alias": "",
+                                        "ctrl": {
+                                            "code": "textinput-4175262474783771",
+                                            "component": ""
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "pagesize": "",
+                        "lazyload": "",
+                        "condition": ""
+                    },
+                    {
+                        "condition": "",
+                        "code": "1065420192160550917",
+                        "desc": "flycode",
+                        "type": "flycode",
+                        "script": "var cashType = Page.getCtrl('cash_type').value;\nvar isCash = cashType == '现金';\nPage.getCtrl('兑付金额').hidden = !isCash;\nPage.getCtrl('cash_count').hidden = isCash;\nPage.getCtrl('cash_product').hidden = isCash;\nPage.getCtrl('cash_company').hidden = isCash;\nif(isCash){\n  var maxCount = Page.getCtrl('cash_max_count').value;\n  Page.getCtrl('兑付金额').setProperty('upperlimit', maxCount);\n  \n}else{\n  var maxCount = Page.getCtrl('max-count').value;\n  Page.getCtrl('cash_count').setProperty('upperlimit', maxCount);\n}\n"
+                    }
+                ],
+                "successhint": "",
+                "key": "",
+                "name": ""
+            },
+            {
+                "code": "1036427993012113486",
+                "desc": "跳转页面",
+                "successhint": "",
+                "condition": "fly:return Page.constraintCheck();",
+                "key": "",
+                "name": "",
+                "actions": [
+                    {
+                        "type": "link",
+                        "code": "1036427993012113483",
+                        "desc": "链接",
+                        "pagecode": "1036427993012113492",
+                        "mode": "push",
+                        "title": "",
+                        "pagesize": {
+                            "width": "",
+                            "height": ""
+                        },
+                        "param": {
+                            "name": "__linkparam",
+                            "datatype": "0",
+                            "ctrl": {
+                                "code": "",
+                                "scope": ""
+                            },
+                            "properties": [
+                                {
+                                    "name": "__pagestatus",
+                                    "value": "",
+                                    "paramtype": "1",
+                                    "ctrl": {
+                                        "code": "",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "costid",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-4752910281159796",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "customerid",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-2934038817781189",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "Amountcount",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "number-3481103678823569",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "id",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "text-9688507072994271",
+                                        "component": ""
+                                    }
+                                },
+                                {
+                                    "name": "singleamount",
+                                    "value": "",
+                                    "paramtype": "3",
+                                    "ctrl": {
+                                        "code": "currency-9354728357859464",
+                                        "component": ""
+                                    }
+                                }
+                            ]
+                        },
+                        "condition": ""
+                    }
+                ]
+            }
+        ],
+        "preprocessor": []
+    }
+}
