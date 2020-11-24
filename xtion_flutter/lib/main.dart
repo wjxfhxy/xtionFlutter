@@ -1,6 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:xtion_flutter/welcome_interaction.dart';
+import 'package:xtion_service/multi_platform_config/multi_platform_config.dart';
+import 'package:xtion_ui/navigator_bloc_provider.dart';
 import 'package:xtion_vm/xtionVMInit.dart';
 import 'package:xtion_engine/page_central_widget.dart';
+import 'package:xtion_common_component/ent_login/enterprise_login_interaction.dart';
+import 'package:xtion_common_component/login/login_interaction.dart';
 
 void main() {
 
@@ -10,17 +17,100 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+  var isInit = true;
+
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: PageCentralWidget("1036427993012113499"),
+      home: //EnterpriseLoginInteraction()//PageCentralWidget("1036427993012113499"),
+      // Navigator(pages:
+      // [
+      //   MaterialPage(
+      //       child: EnterpriseLoginInteraction()
+      //   ),
+      //   // MaterialPage(
+      //   //     child: LoginInteraction()
+      //   // )
+      // ]
+      //     ,
+      // onPopPage: (route, result) {
+      //
+      //   return true;
+      // })
+      NavigatorBlocProvider(initialPages: List()..add(WelcomePage()))
+
     );
   }
 }
+
+// class NavigatorBlocProvider extends StatefulWidget {
+//
+//   var streamController = StreamController.broadcast();
+//
+//   @override
+//   State<StatefulWidget> createState() {
+//
+//     return NavigatorBlocProviderState();
+//   }
+//
+//   static NavigatorBlocProvider of(BuildContext context) {
+//
+//     var provider = context.findAncestorWidgetOfExactType<NavigatorBlocProvider>();
+//     return provider;
+//   }
+//
+//   push() {
+//
+//     streamController.add("");
+//   }
+// }
+//
+// class NavigatorBlocProviderState extends State<NavigatorBlocProvider> {
+//
+//   @override
+//   void initState() {
+//     super.initState();
+//
+//     widget.streamController.onListen = updateNavigator;
+//   }
+//
+//   @override
+//   void dispose() {
+//
+//     widget.streamController.close();
+//
+//     super.dispose();
+//   }
+//
+//   updateNavigator() {
+//
+//     setState(() {
+//     });
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//
+//     return Navigator(pages: [
+//       MaterialPage(
+//           child: EnterpriseLoginInteraction()
+//       ),
+//       // MaterialPage(
+//       //     child: LoginInteraction()
+//       // )
+//     ],
+//         onPopPage: (route, result) {
+//           return true;
+//         });
+//   }
+// }
+
 //
 //class MyHomePage extends StatefulWidget {
 //  MyHomePage({Key key, this.title}) : super(key: key);

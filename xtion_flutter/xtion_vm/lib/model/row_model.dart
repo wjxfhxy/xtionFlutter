@@ -13,7 +13,7 @@ class RowModel extends ViewModel {
 
     subViewModelTree.forEach((f) {
       if(f is LayoutModel) {
-        f.overflow = "0";
+  //      f.overflow = "0";
       }
     });
 

@@ -5,7 +5,7 @@ author:
 homepage:
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -13,6 +13,8 @@ dependencies:
 
   xtion_misc:
     path: ../xtion_misc/
+  xtion_ui:
+    path: ../xtion_ui/
 
 dev_dependencies:
   flutter_test:

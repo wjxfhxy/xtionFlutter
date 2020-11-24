@@ -34,8 +34,6 @@ class _PageCentralWidgetState extends State<PageCentralWidget> {
     return Scaffold(
         appBar: AppBar(
 
-
-
           title: pcc?.titleView ?? Text(""),
           centerTitle: true,
         ),

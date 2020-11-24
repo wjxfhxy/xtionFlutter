@@ -41,7 +41,7 @@ class SelectBoxVM<T extends SelectBoxDesc> extends ViewVM {
 //    this.value = value;
 //
 //    //todo 测试
-//    callback.exceEvent(null, value == "1" ? "lllll": "aaaaa");
+    callback.exceEvent(null, value == "1" ? "lllll": "aaaaa");
   }
 
   @override

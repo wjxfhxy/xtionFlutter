@@ -47,7 +47,7 @@ class _SelectBoxWidgetState extends State<SelectBoxWidget> {
     var rows = desc.options.optionValue().map((f) {
 
       return Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
-        SelectRadio(
+      Radio(
         value: f[OptionDesc.KEY],
         activeColor: Colors.blue,
         groupValue: groupValue,

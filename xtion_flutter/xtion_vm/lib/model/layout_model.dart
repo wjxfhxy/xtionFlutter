@@ -8,16 +8,15 @@ import '../vm/layout_vm.dart';
 
 class LayoutModel extends ViewModel {
 
-  var overflow = "";
-
   LayoutModel.fromJSON(Map<String, dynamic> content): super.fromJSON(content) {
-    overflow = content["overflow"] as String ?? "";
+    var overflow = content["overflow"] as String ?? "";
     if (overflow == "0" || overflow == "hidden")
       overflow = "0";
 
     var desc = viewDescription as LayoutDesc;
 
     desc.flexDirection = FlexDirectionDesc(content["flexdirection"]);
+    desc.overflow = overflow;
 
     subViewModelTree?.forEach((f) => f.viewDescription.parantFlexDirection = desc.flexDirection);
   }
